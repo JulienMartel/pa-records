@@ -1,6 +1,7 @@
 import React from 'react'
 import EmblaCarouselReact from 'embla-carousel-react'
 import Card from '../components/card'
+import Head from 'next/head'
 
 class Home extends React.Component {
   constructor(props) {
@@ -32,6 +33,10 @@ class Home extends React.Component {
     
     return (
       <>
+      <Head>
+        <title>PA Records</title>
+          <link rel="shortcut icon" href="/favicon.png" />
+      </Head>
         <EmblaCarouselReact
           emblaRef={c => (this.embla = c)}
           options={{ loop: false }}
@@ -43,22 +48,22 @@ class Home extends React.Component {
                   name="Caid Jones" 
                   isFirst={true} 
                   embla={this.embla}
-                  twitter=""
-                  soundcloud=""
-                  youtube=""
-                  instagram=""
+                  twitter="https://twitter.com/AbOrlglnaI"
+                  soundcloud="https://soundcloud.com/richard-jones-319"
+                  youtube="https://www.youtube.com/watch?v=HUJqpuuMEPk"
+                  instagram="https://instagram.com/caidjones"
                 ></Card>
               </div>
             </div>
             <div className="slide" style={{ flex: '0 0 100%' }}>
               <div className="this josh">
                 <Card
-                  name="Josue Davis" 
+                  name="Josue Davi" 
                   embla={this.embla}
-                  twitter=""
-                  soundcloud=""
+                  twitter="https://twitter.com/_josuedavi_"
+                  soundcloud="https://soundcloud.com/josuedavi"
                   youtube=""
-                  instagram=""
+                  instagram="https://instagram.com/_josuedavi_"
                 ></Card>
               </div>
             </div>
@@ -69,9 +74,9 @@ class Home extends React.Component {
                   isLast={true} 
                   embla={this.embla}
                   twitter=""
-                  soundcloud=""
-                  youtube=""
-                  instagram=""
+                  soundcloud="https://soundcloud.com/sundayknight"
+                  youtube="https://www.youtube.com/watch?v=HUJqpuuMEPk"
+                  instagram="https://instagram.com/sundayknight47"
                 ></Card>
               </div>
             </div>
