@@ -76,7 +76,7 @@ class Home extends React.Component {
                   twitter=""
                   noTwitter={true}
                   soundcloud="https://soundcloud.com/sundayknight"
-                  youtube="https://www.youtube.com/watch?v=HUJqpuuMEPk"
+                  youtube="https://www.youtube.com/watch?v=y49FmjrI-U8"
                   instagram="https://instagram.com/sundayknight47"
                 ></Card>
               </div>
