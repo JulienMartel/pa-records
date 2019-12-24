@@ -14,9 +14,7 @@ class EmblaCarouselComponent extends React.Component {
   render() {
     return (
       <>
-        <Head>
-          {/* #D9DBBC  is bone-white */}
-          <style>@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');</style> 
+        <Head> 
         </Head>
         <EmblaCarouselReact
           emblaRef={c => (this.embla = c)}
@@ -36,6 +34,7 @@ class EmblaCarouselComponent extends React.Component {
         <button onClick={() => this.embla.scrollNext()}>Next</button>
 
         <style jsx global>{`
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
         * {
           font-family: 'Montserrat', sans-serif;
         }
