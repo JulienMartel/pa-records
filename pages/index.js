@@ -42,27 +42,79 @@ class Home extends React.Component {
           <div style={{ display: 'flex'}} className="main">
             <div className="slide" style={{ flex: '0 0 100%' }}>
               <div className="this" style={{}}>
-                <h3>Caid Jones</h3>
+                <div className="box">
+                  <button className="next" onClick={() => this.embla.scrollNext()}>
+                    <img src="/right.svg" style={{width: "40px"}}></img>
+                  </button>
+                  <h3 className="name">Caid Jones</h3>
+                  <a><img src="/twitter.svg" style={{width: "30px",}}>
+                  
+                  </img></a>
+                  <a><img src="/instagram.svg" style={{width: "30px",}}>
+                  
+                  </img></a>
+                  <a><img src="/youtube.svg" style={{width: "30px",}}>
+                  
+                  </img></a>
+                  <a><img src="/soundcloud.svg" style={{width: "30px",}}>
+                  
+                  </img></a>
+                </div>
               </div>
             </div>
             <div className="slide" style={{ flex: '0 0 100%' }}>
-            <div className="this josh" style={{}}>
-                <h3>Josue Davis</h3>
+              <div className="this josh" style={{}}>
+              <div className="box">
+                  <button className="back" onClick={() => this.embla.scrollPrev()}>
+                    <img src = "/left.svg" style={{width: "40px"}}></img>
+                  </button>
+                  <button className="next" onClick={() => this.embla.scrollNext()}>
+                    <img src="/right.svg" style={{width: "40px"}}></img>
+                  </button>
+                  <h3 className="name">Josue Davis</h3>
+                  <a><img src="/twitter.svg" style={{width: "30px",}}>
+                  
+                  </img></a>
+                  <a><img src="/instagram.svg" style={{width: "30px",}}>
+                  
+                  </img></a>
+                  <a><img src="/youtube.svg" style={{width: "30px",}}>
+                  
+                  </img></a>
+                  <a><img src="/soundcloud.svg" style={{width: "30px",}}>
+                  
+                  </img></a>
+                </div>
               </div>
             </div>
             <div className="slide" style={{ flex: '0 0 100%' }}>
               <div className="this dion" style={{}}>
-                <h3>Sunday Knight</h3>
+              <div className="box">
+                  <button className="back" onClick={() => this.embla.scrollPrev()}>
+                    <img src = "/left.svg" style={{width: "40px"}}></img>
+                  </button>
+                  <h3 className="name">Sunday Knight</h3>
+                  <a><img src="/twitter.svg" style={{width: "30px",}}>
+                  
+                  </img></a>
+                  <a><img src="/instagram.svg" style={{width: "30px",}}>
+                  
+                  </img></a>
+                  <a><img src="/youtube.svg" style={{width: "30px",}}>
+                  
+                  </img></a>
+                  <a><img src="/soundcloud.svg" style={{width: "30px",}}>
+                  
+                  </img></a>
+                </div>
               </div>
             </div>
           </div>
         </EmblaCarouselReact>
-        <button className="back" onClick={() => this.embla.scrollPrev()}>
-          <img src = "/left.svg" style={{width: "25px"}}></img>
-        </button>
-        <button className="next" onClick={() => this.embla.scrollNext()}>
-          <img src="/right.svg" style={{width: "25px"}}></img>
-        </button>
+
+        <div className="title">
+          Pay Attention
+        </div>
 
         <style jsx global>{`
         * {
@@ -88,27 +140,49 @@ class Home extends React.Component {
           align-items: center;
         }
 
-        .this {
-          color: white;
-          background-image: url("/cayden.JPG");
-          background-size: 100%;
-          width: 100vw;
-          height: 100vh;
+        .box {
+          width: 60vw;
+          height: 55vh;
+          background-color: black;
           display: flex;
           justify-content: center;
           align-items: center;
-          font-size: 2em;
-          font-weight:700;
+          padding: 20px;
+          flex-direction: column;
+          position: relative;
         }
 
+        .box a {
+          margin: 20px;
+        }
+
+
+        .this {
+          color: white;
+          background-image: url("/cayden.JPG");
+          background-size: 50%;
+          background-position: center;
+          width: ${this.state.width}px;
+          height: ${this.state.height}px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5em;
+        }
         .josh {
-          background-image: url(/josh.JPG)
+          background-image: url("/josh.JPG")
         }
         .dion {
-          background-size: 33.333%;
-          background-image: url(/dion.PNG)
+          background-size 33.333%;
+          background-image: url("/dion.PNG")
         }
 
+        .name {
+          font-weight:700;
+          font-size: 1em;
+        }
+
+        
         .my-element-that-i-want-to-be-100vh {
           height: 100vh; /* Fallback for browsers that do not support Custom Properties */
           height: calc(var(--vh, 1vh) * 100);
@@ -116,17 +190,27 @@ class Home extends React.Component {
 
         .back, button {
           position: absolute;
-          background-color: #84848461;
+          background-color: #9f9f9f00;
           z-index: 10;
           border: 0;
-          height: 300px;
-          top: calc(50% - 150px);
-          left: 0px;
+          height: 100px;
+          top: calc(50% - 50px);
+          left: 5px;
           color: white;
         }
         button.next{
-          right: 0px;
+          right: 5px;
           left: unset;
+        }
+
+        .title {
+          top: 20px;
+          left 20px;
+          position: absolute;
+          color: white;
+          font-size: 2vh;
+          background-color: black;
+          padding: 5px;
         }
         `}</style>
       </>
