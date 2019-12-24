@@ -1,6 +1,6 @@
 import React from 'react'
 import EmblaCarouselReact from 'embla-carousel-react'
-import Head from 'next/head'
+import Card from '../components/card'
 
 class Home extends React.Component {
   constructor(props) {
@@ -38,72 +38,41 @@ class Home extends React.Component {
         >
           <div style={{ display: 'flex'}} className="main">
             <div className="slide" style={{ flex: '0 0 100%' }}>
-              <div className="this" style={{}}>
-                <div className="box">
-                  <button className="next" onClick={() => this.embla.scrollNext()}>
-                    <img src="/right.svg" style={{width: "40px"}}></img>
-                  </button>
-                  <h3 className="name">Caid Jones</h3>
-                  <a><img src="/twitter.svg" style={{width: "30px",}}>
-                  
-                  </img></a>
-                  <a><img src="/instagram.svg" style={{width: "30px",}}>
-                  
-                  </img></a>
-                  <a><img src="/youtube.svg" style={{width: "30px",}}>
-                  
-                  </img></a>
-                  <a><img src="/soundcloud.svg" style={{width: "30px",}}>
-                  
-                  </img></a>
-                </div>
+              <div className="this caid">
+                <Card
+                  name="Caid Jones" 
+                  isFirst={true} 
+                  embla={this.embla}
+                  twitter=""
+                  soundcloud=""
+                  youtube=""
+                  instagram=""
+                ></Card>
               </div>
             </div>
             <div className="slide" style={{ flex: '0 0 100%' }}>
-              <div className="this josh" style={{}}>
-              <div className="box">
-                  <button className="back" onClick={() => this.embla.scrollPrev()}>
-                    <img src = "/left.svg" style={{width: "40px"}}></img>
-                  </button>
-                  <button className="next" onClick={() => this.embla.scrollNext()}>
-                    <img src="/right.svg" style={{width: "40px"}}></img>
-                  </button>
-                  <h3 className="name">Josue Davis</h3>
-                  <a><img src="/twitter.svg" style={{width: "30px",}}>
-                  
-                  </img></a>
-                  <a><img src="/instagram.svg" style={{width: "30px",}}>
-                  
-                  </img></a>
-                  <a><img src="/youtube.svg" style={{width: "30px",}}>
-                  
-                  </img></a>
-                  <a><img src="/soundcloud.svg" style={{width: "30px",}}>
-                  
-                  </img></a>
-                </div>
+              <div className="this josh">
+                <Card
+                  name="Josue Davis" 
+                  embla={this.embla}
+                  twitter=""
+                  soundcloud=""
+                  youtube=""
+                  instagram=""
+                ></Card>
               </div>
             </div>
             <div className="slide" style={{ flex: '0 0 100%' }}>
-              <div className="this dion" style={{}}>
-              <div className="box">
-                  <button className="back" onClick={() => this.embla.scrollPrev()}>
-                    <img src = "/left.svg" style={{width: "40px"}}></img>
-                  </button>
-                  <h3 className="name">Sunday Knight</h3>
-                  <a><img src="/twitter.svg" style={{width: "30px",}}>
-                  
-                  </img></a>
-                  <a><img src="/instagram.svg" style={{width: "30px",}}>
-                  
-                  </img></a>
-                  <a><img src="/youtube.svg" style={{width: "30px",}}>
-                  
-                  </img></a>
-                  <a><img src="/soundcloud.svg" style={{width: "30px",}}>
-                  
-                  </img></a>
-                </div>
+              <div className="this dion">
+                <Card
+                  name="Sunday Knight" 
+                  isLast={true} 
+                  embla={this.embla}
+                  twitter=""
+                  soundcloud=""
+                  youtube=""
+                  instagram=""
+                ></Card>
               </div>
             </div>
           </div>
@@ -114,7 +83,12 @@ class Home extends React.Component {
         </div>
 
         <style jsx global>{`
-        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+        @import url('');
+        @font-face {
+            font-family:"Montserrat Alternates";
+            src: url("/font/MontserratAlternates-Medium.ttf")
+        }
+      
         * {
           font-family: 'Montserrat Alternates', sans-serif;
         }
@@ -138,27 +112,9 @@ class Home extends React.Component {
           align-items: center;
         }
 
-        .box {
-          width: 60vw;
-          height: 55vh;
-          background-color: black;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 20px;
-          flex-direction: column;
-          position: relative;
-        }
-
-        .box a {
-          margin: 20px;
-        }
-
-
         .this {
           color: white;
-          background-image: url("/cayden.JPG");
-          background-size: 50%;
+          background-size: 47%;
           background-position: center;
           width: ${this.state.width}px;
           height: ${this.state.height}px;
@@ -171,34 +127,11 @@ class Home extends React.Component {
           background-image: url("/josh.JPG")
         }
         .dion {
-          background-size 33.333%;
-          background-image: url("/dion.PNG")
+          background-size 47%;
+          background-image: url("/dion3.jpg")
         }
-
-        .name {
-          font-weight:700;
-          font-size: 1em;
-        }
-
-        
-        .my-element-that-i-want-to-be-100vh {
-          height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-          height: calc(var(--vh, 1vh) * 100);
-        }
-
-        .back, button {
-          position: absolute;
-          background-color: #9f9f9f00;
-          z-index: 10;
-          border: 0;
-          height: 100px;
-          top: calc(50% - 50px);
-          left: 5px;
-          color: white;
-        }
-        button.next{
-          right: 5px;
-          left: unset;
+        .caid {
+          background-image: url("/cayden.JPG");
         }
 
         .title {
@@ -206,9 +139,11 @@ class Home extends React.Component {
           left 20px;
           position: absolute;
           color: white;
-          font-size: 2vh;
+          font-size: 1.5vh;
           background-color: black;
           padding: 5px;
+          font-weight:700;
+
         }
         `}</style>
       </>
