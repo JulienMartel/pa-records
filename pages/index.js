@@ -62,7 +62,7 @@ class Home extends React.Component {
                   embla={this.embla}
                   twitter="https://twitter.com/_josuedavi_"
                   soundcloud="https://soundcloud.com/josuedavi"
-                  youtube=""
+                  youtube="https://www.youtube.com/channel/UCWtHIgVam1hk27ngH7lojoA"
                   instagram="https://instagram.com/_josuedavi_"
                 ></Card>
               </div>
@@ -74,6 +74,7 @@ class Home extends React.Component {
                   isLast={true} 
                   embla={this.embla}
                   twitter=""
+                  noTwitter={true}
                   soundcloud="https://soundcloud.com/sundayknight"
                   youtube="https://www.youtube.com/watch?v=HUJqpuuMEPk"
                   instagram="https://instagram.com/sundayknight47"
@@ -119,7 +120,7 @@ class Home extends React.Component {
 
         .this {
           color: white;
-          background-size: 47%;
+          background-size: 50%;
           background-position: center;
           width: ${this.state.width}px;
           height: ${this.state.height}px;
@@ -129,14 +130,27 @@ class Home extends React.Component {
           font-size: 1.5em;
         }
         .josh {
-          background-image: url("/josh.JPG")
+          background-image: url("/josh500.png")
         }
         .dion {
-          background-size 47%;
-          background-image: url("/dion3.jpg")
+          background-image: url("/dion3.png");
+          background-size: 50%;
+          background-position: unset;
         }
         .caid {
-          background-image: url("/cayden.JPG");
+          background-image: url("/cayden500.png");
+        }
+        @media (max-width: 600px) {
+          .this.dion {
+            background-size: 100%;
+          }
+        }
+
+        @media (min-width: 800px) {
+          .this.josh, .this.caid {
+            background-size: 35%;
+
+          }
         }
 
         .title {

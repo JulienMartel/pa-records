@@ -1,20 +1,36 @@
 import React from 'react'
 import Nav from '../components/nav'
 
-class Card extends React.Component {
-
-
-
+class Twitter extends React.Component {
     render() {
-        console.log(this.props.isFirst, this.props.isLast)
+        if (this.props.noTwitter) {
+            return <></>;
+        }
+        else {
+            return <a className="twitter" href={this.props.link}><img src="/twitter.svg" style={{width: "30px",}}></img></a>
+        }
+    }
+}
+
+
+class Card extends React.Component {
+    render() {
+        
+        if (this.props.noTwitter) {
+            let twitter  = <></>;
+        }
+        else {
+            let twitter = <a className="twitter" href={this.props.twitter}><img src="/twitter.svg" style={{width: "30px",}}></img></a>
+        }
+
         return (
             <div className="box">
                 <Nav isFirst={this.props.isFirst} isLast={this.props.isLast} embla={this.props.embla}></Nav>
                 <h3 className="name">{this.props.name}</h3>
-                <a href={this.props.twitter}><img src="/twitter.svg" style={{width: "30px",}}></img></a>
-                <a href={this.props.instagram}><img src="/instagram.svg" style={{width: "30px",}}></img></a>
-                <a href={this.props.youtube}><img src="/youtube.svg" style={{width: "30px",}}></img></a>
-                <a href={this.props.soundcloud}><img src="/soundcloud.svg" style={{width: "30px",}}></img></a>
+                <Twitter noTwitter={this.props.noTwitter} link={this.props.twitter}/>
+                <a className="instagram" href={this.props.instagram}><img src="/instagram.svg" style={{width: "30px",}}></img></a>
+                <a className="youtube" href={this.props.youtube}><img src="/youtube.svg" style={{width: "30px",}}></img></a>
+                <a className="soundcloud" href={this.props.soundcloud}><img src="/soundcloud.svg" style={{width: "30px",}}></img></a>
                 <style global jsx>{`
                     .back, button {
                         position: absolute;
