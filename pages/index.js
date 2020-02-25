@@ -49,7 +49,7 @@ class Home extends React.Component {
                   isFirst={true} 
                   embla={this.embla}
                   twitter="https://twitter.com/AbOrlglnaI"
-                  soundcloud="https://soundcloud.com/richard-jones-319"
+                  soundcloud="https://soundcloud.com/caidjones"
                   youtube="https://www.youtube.com/watch?v=HUJqpuuMEPk"
                   instagram="https://instagram.com/caidjones"
                 ></Card>
