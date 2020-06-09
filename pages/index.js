@@ -29,8 +29,8 @@ class Home extends React.Component {
       <Head>
         <title>PA Records</title>
           <link rel="shortcut icon" href="/favicon.png" />
-          <meta property="og:title" content="Pay Attention Creations" />
-          <meta property="og:description" content="PA Records" />
+          <meta property="og:title" content="Pay Attention Records" />
+          <meta property="og:description" content="Pay Attention Creations" />
           <meta property="og:image" content="/ogimg.png" />
           <meta property="og:url" content="https://toodistracted.com" />
           <meta name="twitter:card" content="summary_large_image" />
