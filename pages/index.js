@@ -66,6 +66,7 @@ class Home extends React.Component {
                   soundcloud="https://soundcloud.com/josuedavi"
                   youtube="https://www.youtube.com/channel/UCWtHIgVam1hk27ngH7lojoA"
                   instagram="https://instagram.com/_josuedavi_"
+                  bandcamp="https://josuedavi.bandcamp.com/releases"
                 ></Card>
               </div>
             </div>
