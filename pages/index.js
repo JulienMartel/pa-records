@@ -49,6 +49,7 @@ class Home extends React.Component {
                   name="Caid Jones" 
                   isFirst={true} 
                   embla={this.embla}
+                  instagram="https://www.instagram.com/caidjones/"
                   twitter="https://twitter.com/AbOrlglnaI"
                   soundcloud="https://soundcloud.com/caidjones"
                   youtube="https://www.youtube.com/channel/UCcxlsh7kUPHeF7gYM1WYiag/"
