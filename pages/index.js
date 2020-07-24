@@ -64,7 +64,6 @@ class Home extends React.Component {
                 <Card
                   name="Josue Davi" 
                   embla={this.embla}
-                  twitter="https://twitter.com/_josuedavi_"
                   soundcloud="https://soundcloud.com/josuedavi"
                   youtube="https://www.youtube.com/channel/UCWtHIgVam1hk27ngH7lojoA"
                   instagram="https://instagram.com/_josuedavi_"
