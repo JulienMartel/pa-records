@@ -1,7 +1,7 @@
 import React from 'react'
 import EmblaCarouselReact from 'embla-carousel-react'
 import Card from '../components/card'
-import Head from 'next/head'
+import RichMetaTags from '../components/RichMetaTags'
 
 class Home extends React.Component {
   state = { 
@@ -26,18 +26,11 @@ class Home extends React.Component {
     
     return (
       <>
-      <Head>
-        <title>PA Records</title>
-          <link rel="shortcut icon" href="/favicon.png" />
-          <meta property="og:title" content="Pay Attention Records" />
-          <meta property="og:description" content="Pay Attention Creations" />
-          <meta property="og:image" content="/ogimg.png" />
-          <meta property="og:url" content="https://toodistracted.com" />
-          <meta name="twitter:card" content="summary_large_image" />
-
-          <meta property="og:site_name" content="Pay Attention" />
-          <meta name="twitter:image:alt" content="Pay Attention text" />
-      </Head>
+        <RichMetaTags 
+          title="Pay Attention Records"
+          desc="Pay Attention Creations"
+          imgUrl="/ogimg.png"
+        />
         <EmblaCarouselReact
           emblaRef={c => (this.embla = c)}
           options={{ loop: false }}
