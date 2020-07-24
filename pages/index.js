@@ -55,6 +55,7 @@ class Home extends React.Component {
                   youtube="https://www.youtube.com/channel/UCcxlsh7kUPHeF7gYM1WYiag/"
                   spotify="https://open.spotify.com/artist/69OZCcvont06MaZH5KeLxz"
                   bandcamp="https://caidjones.bandcamp.com/releases"
+                  apple="https://music.apple.com/ca/artist/caid-jones/1509453479"
                 ></Card>
               </div>
             </div>
@@ -68,6 +69,7 @@ class Home extends React.Component {
                   youtube="https://www.youtube.com/channel/UCWtHIgVam1hk27ngH7lojoA"
                   instagram="https://instagram.com/_josuedavi_"
                   bandcamp="https://josuedavi.bandcamp.com/releases"
+                  beatstars="https://www.beatstars.com/josuedavimusic/feed"
                 ></Card>
               </div>
             </div>

@@ -14,19 +14,29 @@ class Card extends React.Component {
       soundcloud,
       spotify,
       bandcamp,
+      beatstars,
+      apple,
     } = this.props
     return (
       <div className="box">
         <Nav isFirst={isFirst} isLast={isLast} embla={embla}></Nav>
         <h3 className="name">{name}</h3>
-        {twitter && <a className="twitter" href={twitter}><img src="/twitter.svg" style={{width: "30px",}}></img></a>}
-        {instagram && <a className="instagram" href={instagram}><img src="/instagram.svg" style={{width: "30px",}}></img></a>}
-        {youtube && <a className="youtube" href={youtube}><img src="/youtube.svg" style={{width: "30px",}}></img></a>}
-        {soundcloud && <a className="soundcloud" href={soundcloud}><img src="/soundcloud.svg" style={{width: "30px",}}></img></a>}
-        {spotify && <a className="spotify" href={spotify}><img src="/spotify.svg" style={{width: "30px",}}></img></a>}
-        {bandcamp && <a className="bandcamp" href={bandcamp}><img src="/bandcamp.svg" style={{width: "30px",}}></img></a>}
-        
+        <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap", width: "150px", alignItems: "center", justifyContent: "center"}}>
+          {instagram && <a className="icon instagram" href={instagram}><img src="/instagram.svg" style={{width: "30px",}}></img></a>}
+          {twitter && <a className="icon twitter" href={twitter}><img src="/twitter.svg" style={{width: "30px",}}></img></a>}
+          {youtube && <a className="icon youtube" href={youtube}><img src="/youtube.svg" style={{width: "30px",}}></img></a>}
+          {soundcloud && <a className="icon soundcloud" href={soundcloud}><img src="/soundcloud.svg" style={{width: "30px",}}></img></a>}
+          {spotify && <a className="icon spotify" href={spotify}><img src="/spotify.svg" style={{width: "30px",}}></img></a>}
+          {bandcamp && <a className="icon bandcamp" href={bandcamp}><img src="/bandcamp.svg" style={{width: "30px",}}></img></a>}
+          {beatstars && <a className="icon beatstars" href={beatstars}><img src="/beatstars.svg" style={{width: "28px",}}></img></a>}
+          {apple && <a className="icon apple" href={apple}><img src="/apple.svg" style={{width: "30px",}}></img></a>}
+
+        </div>
         <style global jsx>{`
+          .icon {
+            width: "50%"
+          }
+
           .back, button {
             position: absolute;
             background-color: #9f9f9f00;
