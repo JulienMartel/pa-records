@@ -42,6 +42,7 @@ class Home extends React.Component {
                   name="Caid Jones" 
                   isFirst={true} 
                   embla={this.embla}
+                  
                   instagram="https://www.instagram.com/caidjones/"
                   twitter="https://twitter.com/AbOrlglnaI"
                   soundcloud="https://soundcloud.com/caidjones"
@@ -57,11 +58,14 @@ class Home extends React.Component {
                 <Card
                   name="Josue Davi" 
                   embla={this.embla}
+
                   soundcloud="https://soundcloud.com/josuedavi"
                   youtube="https://www.youtube.com/channel/UCWtHIgVam1hk27ngH7lojoA"
                   instagram="https://instagram.com/_josuedavi_"
                   bandcamp="https://josuedavi.bandcamp.com/releases"
                   beatstars="https://www.beatstars.com/josuedavimusic/feed"
+                  apple="https://music.apple.com/us/artist/josue-davi/1511613521"
+                  spotify="https://open.spotify.com/artist/0bnV8rlnNtqTIXMOxshN9Y?si=3VdjZeuITBmUFzbiZg-h0Q"
                 ></Card>
               </div>
             </div>
